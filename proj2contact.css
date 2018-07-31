@@ -1,0 +1,291 @@
+.navbar-custom {
+	background-color: black;
+	opacity: 0.8;
+}
+
+.align {
+	text-align: center;
+}
+
+.optionnav1 {
+	margin-left: 70px;
+	margin-right: 20px;
+}
+
+
+.optionnav {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+body {
+	background: white;
+	background-repeat: no-repeat;
+    background-size: 100% auto; 
+    }
+
+.navbar-brand {
+	color: white !important;
+}
+
+.footer {
+
+	padding-top: 40px;
+}
+
+.confont {
+	font-size: 16px;
+	color: black;
+}
+
+a{
+	transform-style: none;
+	color: white;
+}
+
+#no_items {
+	text-align: left;
+font-size: 30px;
+font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+}
+
+h1 {
+	text-align: center;
+	color: black;
+	opacity: 0.7;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.h1align {
+	margin-left: 120px;
+}
+
+#right {
+    position: absolute;
+    right: 0;
+    padding-top: 15px;
+    padding-right: 50px;
+    color: white;
+}
+
+
+footer {
+	height: 100px;
+	background-color: black;
+	opacity: 0.8;
+}
+
+.contacthead {
+	text-align: center;
+	font: 30px;
+}
+
+
+/******************************************************* Display Products ******************************************************/
+
+/* Box alignment reference: w3schools.com*/
+#content {
+    
+    flex-grow: 1;
+    padding: 24px;
+    margin-left: 200px;
+    text-align: justify;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-gap: 35px 12px;
+}
+.boxes {
+	width: 300px;
+    border: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 4px;
+}
+.display_img {
+    min-height: 160px;
+    max-height: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.boxes:hover {
+	 box-shadow: 0 0 2px 1px #0099cc;
+	 background: 
+}
+
+p {
+	color: black;
+	text-align: center;
+}
+
+.add_cart {
+	color:white;
+
+	background: #0099cc;
+	
+}
+
+.show_cart {
+	color:white;
+
+	background: #0099cc;
+	
+}
+
+#str_button {
+	margin-left: 300px;
+}
+
+.navbar-brand {
+	margin-right: 0;
+}
+
+/******************************************************* Modal display ********************************************************/
+
+.show_box {
+	width: 850px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 4px;
+}
+.product_img {
+    min-height: 160px;
+    max-height: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+body .modal {
+  width: 90%; /* desired relative width */
+  left: 5%; /* (100%-width)/2 */
+  /* place center */
+  margin-left:auto;
+  margin-right:auto; 
+}
+
+
+/******************************************************** side bar *********************************************************/
+
+/* sidenav css reference: w3schools.com */
+.sidenav {
+	height: 100%; 
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    color: black;
+    top: 20px;
+    left: 0;
+    
+    overflow-x: hidden;
+    padding-top: 20px;
+    }
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+h3 {
+	color: black;
+	text-align: center;
+}
+
+.check {
+	padding-left: 20px !important;
+	color: #0099cc !important;
+	padding-top: 0px;
+	text-align: left;	
+	font-size: 15px !important;
+}
+
+.check:hover {
+	color: black !important;
+}
+/*.tick {
+	content: "\2714";
+        font-size: 30px;
+}
+*/
+
+input[type=checkbox] {
+  transform: scale(0.8);
+}
+
+#error_message {
+	text-align: center;
+	color: red;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.button {
+	border-radius: 1em;
+	background: #0099cc;
+	color: white;
+	border:1px solid white;
+	height: 40px;
+	text-align: center;
+	width: 150px;
+	margin-top: 10px;
+
+}
+
+.button:hover {
+	color: white;
+	background-color: #808080;
+
+}
+
+.green {
+	color: #008000;
+}
+
+.button1 {
+	border-radius: 1em;
+	background: #0099cc;
+	color: white;
+	border:1px solid white;
+	height: 40px;
+	text-align: center;
+	width: 150px;
+    margin:auto auto;
+}
+
+.button1:hover {
+	color: white;
+	background-color: #808080;
+
+}

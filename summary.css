@@ -1,0 +1,121 @@
+.navbar-custom {
+	background-color: black;
+	opacity: 0.8;
+}
+
+.align {
+	text-align: center;
+}
+
+.optionnav1 {
+	margin-left: 70px;
+	margin-right: 20px;
+}
+
+
+.optionnav {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+body {
+	background: white;
+	background-repeat: no-repeat;
+    background-size: 100% auto; 
+    }
+
+.navbar-brand {
+	color: white !important;
+}
+
+.footer {
+
+	padding-top: 40px;
+}
+
+.confont {
+	font-size: 16px;
+	color: black;
+}
+
+a {
+	transform-style: none;
+	color: white;
+}
+
+#right {
+    position: absolute;
+    right: 0;
+    padding-top: 15px;
+    padding-right: 50px;
+    color: white;
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	text-align: justify;
+}
+
+#confirmhead {
+	font-size: 40px !important;
+	font-weight: bold !important;
+	color: green;
+}
+
+p {
+	font-size: 15px !important;
+	padding-top: 0px !important;
+}
+
+table {
+	align-items: center;
+}
+
+td, tr {
+	
+	padding-left: 0;
+	width: 40px;
+}
+
+.imagesum {
+	width:20px !important;
+}
+
+.button {
+	border-radius: 1em;
+	background: #0099cc;
+	color: white !important;
+	border:1px solid white;
+	height: 40px;
+	text-align: center;
+	width: 150px;
+	margin-top: 10px;
+	
+	
+
+}
+
+.button:hover {
+	color: white;
+	background-color: #808080;
+
+}
+footer {
+	height: 70px;
+	background-color: black;
+	opacity: 0.8;
+	text-align: center;
+	color: white;
+	font-size: 10px;
+	margin: auto auto;
+	
+}
+
+#footer {
+	color: white;
+	font-size: 10px;
+	margin: auto auto;
+}

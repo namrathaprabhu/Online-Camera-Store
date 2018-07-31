@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+  <script src="/jquery/jQueryUI.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+
+  <title>Best Camera Store</title>
+  
+  <script type="text/javascript" src="/jadrn030/js/ajax_get_lib.js"></script>
+  <script type="text/javascript" src="/jadrn030/js/shopping_cart.js"></script>
+  <script type="text/javascript" src="/jadrn030/js/p2.js"></script>
+  <script type="text/javascript" src="/jadrn030/js/form.js"></script>
+  <!-- <script type="text/javascript" src="/jadrn030/js/summary.js"></script> -->
+  <link rel="stylesheet" href="proj2contact.css">
+</head>
+
+<body>
+    
+	<nav class=" navbar navbar-custom navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://jadran.sdsu.edu/jadrn030/list.html" class="navbar-brand" id="move"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> <b>Best Camera Store</b> </a>
+            <ul class="nav navbar-nav">
+              <li><a href="http://jadran.sdsu.edu/jadrn030/list.html" class="optionnav1"><b>Products</b></a></li>
+              <li><a href="http://jadran.sdsu.edu/jadrn030/cart.html" class="optionnav"><b>Order</b></a></li>
+              <li><a href="http://jadran.sdsu.edu/jadrn030/contact.html" class="optionnav"><b>Contact</b></a></li>
+            </ul>
+            
+            <a href="http://jadran.sdsu.edu/jadrn030/cart.html"><p id="right"><span class="glyphicon glyphicon-shopping-cart"></span><b>Cart&nbsp;<span id="count">0</span></b></p></a>
+            
+        </div>
+    </div>
+    </nav>
+    <br><br><br>
+
+    <!-- <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+ -->
+    <!-- Modal content-->
+    <!-- <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title align"><b>Order Check Out Form<b></h4>
+      </div>
+      <div class="modal-body">
+         -->
+        <div class="container">
+          <div class="jumbotron">
+        <div class="form">
+        <fieldset>
+            <form class="form-inline"
+            id ="form"
+            action=""
+          method="post">
+          
+
+                <div class="form-group ">
+                    <div id="summary"></div>
+                    <div class="align"> <h3><b>Shipping Address</b></h3></div> 
+                </div>
+                <br>
+                <br>
+                
+                <div class="form-group form-inline">
+                    <label for="fname">First Name:</label>
+                    <input type="text" class="form-control" id="fname" name="fname" size="20">
+                </div>
+
+                <div class="form-group form-inline">
+                    <label for="lname">Last Name:</label>
+                    <input type="text"  class="form-control" id="lname" name="lname" size="20">
+                </div><br>
+                
+                <div class="form-group">
+                    <label for="address1">Address:</label>
+                    <input type="text" class="form-control" id="address1" size="40" name="address1" placeholder="4560 55th Street">
+                </div>
+
+                <div class="form-group">
+                    <label for="address2">Address:</label>
+                    <input type="text" class="form-control" id="address2" size="40" name="address2"  placeholder="Apt W1">
+                </div>
+                <br>
+                
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" name="city" size="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" class="form-control" id="state" name="state" size="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">Zip:</label>
+                    <input type="text" class="form-control" id="zip" name="zip" size="5" maxlength="5">
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" class="form-control" id="phone" name="phone" size="10" maxlength="10">
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                    
+                <label><input type="checkbox" id="sameaddress" /> Billing address same as shipping address</label>
+                </div>
+                              
+                <br>
+                <br>
+                <div class="form-group">
+                    <div class="align"> <h3><b>Billing Address</h3></b></div> 
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" class="form-control" id="b-fname" name="b-fname" size="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text"  class="form-control" id="b-lname" name="b-lname" size="20">
+                </div><br>
+                
+
+                <div class="form-group">
+                    <label for="address1">Address:</label>
+                    <input type="text" class="form-control" id="b-address1" size="40" name="b-address1" placeholder="4560 55th Street">
+                </div>
+
+                <div class="form-group">
+                    <label for="address2">Address:</label>
+                    <input type="text" class="form-control" id="b-address2" size="40" name="b-address2"  placeholder="Apt W1">
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="b-city" name="b-city" size="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" class="form-control" id="b-state" name="b-state" size="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">Zip:</label>
+                    <input type="text" class="form-control" id="b-zip" name="b-zip" size="5" maxlength="5">
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" class="form-control" id="b-phone" name="b-phone" size="10" maxlength="10">
+                </div>
+                <br>
+                <br>
+
+                <div class="form-group">
+                    <div class="align"> <h3><b>Payment Details</h3></b></div> 
+                </div>
+                <br>
+                <br>
+                
+                <div class="form-group">
+                    <label for="expmonth">Card Type</label>
+                    <select class="form-control" id="expmonth" name="cardtype">
+                        <option>VISA</option>
+                        <option>MASTERCARD</option>
+                        <option>AMERICAN EXPRESS</option>
+                        <option>DISCOVER</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cardname">Name on Card:</label>
+                    <input type="text" class="form-control" id="cardname" name="cardname" size="20">
+                </div>
+                <div class="form-group">
+                    <label for="cardno">Card Number:</label>
+                    <input type="text" class="form-control" id="cardno" name="cardno" size="16" maxlength="16">
+                </div>
+
+                <div class="form-group">
+                    <label for="expmonth">Expiration:</label>
+                    <input type="text" class="form-control" id="expmonth" name="expmonth" size="2" maxlength="2" placeholder="mm">
+
+                    <input type="text" class="form-control" id="expyear" name="expyear" size="4" maxlength="4" placeholder="yyyy">
+                    
+                    <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" size="3" maxlength="3">
+                </div>
+                </div>
+                
+            </form>
+        </fieldset>
+      </div>
+      <br><br><br>
+      <div id="error_message"></div>
+      <br>
+      <input type="reset" value="clear" id="resetB" class="button"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" value ="Continue" id="continue" class="button"><br><br><br><br>
+      </div>
+    </div>
+</div>
+</div>
+
+  </div>
+</div>
+<!-- footer -->
+<footer>
+  <p> Copyright 2018. All Rights Reserved. </p> 
+</footer>
+
+</body>
+</html>

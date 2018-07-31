@@ -1,0 +1,111 @@
+.navbar-custom {
+	background-color: black;
+	opacity: 0.8;
+}
+
+.optionnav1 {
+	margin-left: 70px;
+	margin-right: 20px;
+}
+
+
+.optionnav {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#image {
+	width: 100% !important;
+	height: 750px !important;
+}
+
+#image2 {
+	width: 100% !important;
+	height: 750px !important;
+}
+
+#image3 {
+	width: 100% !important;
+	height: 750px !important;
+}
+
+.navbar-brand {
+	color: white !important;
+}
+
+#myCarousel {
+	margin-top: 100px;
+}
+
+a {
+	transform-style: none;
+	color: white;
+}
+
+body {
+	background: url("http://www.gsfdcy.com/data/img/15/1274007-camera-wallpaper.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% auto; 
+    }
+
+h2 {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+}
+
+h1 {
+	text-align: center;
+	color: White;
+	margin-left: 200px;
+	margin-top: 220px;
+	font-size: 60px;
+	font-weight: bold;
+
+}
+
+#right {
+    position: absolute;
+    right: 0;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+
+a {
+	transform-style: none;
+}
+
+footer {
+	height: 100px;
+	background-color: black;
+	opacity: 0.8;
+}
+
+p {
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+	opacity:0.8;
+}
+
+.tablealign {
+	margin: auto;
+	width: 80%;
+	height: 450px;
+	table-layout: fixed;
+	text-align: center;
+	
+}
+
+/*.tablealign td {
+	padding 80px;
+}*/
+
+.imagetable {
+	width: 200px;
+	height: auto;
+}
+
+.navbar-brand {
+	margin-right: 0;
+}
