@@ -29,6 +29,7 @@
     
 function shopping_cart(owner) {
     this.owner = $.trim(owner);
+    this.retailArray = new Array();
     this.skuArray = new Array();
     this.qtyArray = new Array();
 
@@ -51,41 +52,46 @@ function shopping_cart(owner) {
             var pair = arr[i].split("|"); 
             if(pair[0] == undefined || pair[1] == undefined) continue;
             this.skuArray[i] = pair[0];
-            this.qtyArray[i] = pair[1];
+            this.retailArray[i] = pair[1];
+            this.qtyArray[i] = pair[2];
             }         
         }
         
     this.writeCookie = function() {  // PRIVATE METHOD
         var toWrite = this.owner+"=";
         for(i=0; i < this.skuArray.length; i++) 
-            toWrite += this.skuArray[i] + "|" + this.qtyArray[i] + "||";
+            toWrite += this.skuArray[i] + "|" + this.retailArray[i] + "|" + this.qtyArray[i] + "||";
         toWrite = toWrite.substring(0,toWrite.length - 2);
         toWrite += "; path=/";
         document.cookie = toWrite;
         }
 //////////////////////////////////////////////////////////////////////////            
         
-    this.add = function(sku, quantity) {
+    this.add = function(sku, retail, quantity) {
         sku = $.trim(sku);
+        retail = $.trim(retail);
         quantity = $.trim(quantity);
         this.getCookieValues(); 
         var found = false;
         for(i=0; i < this.skuArray.length; i++)
-        if(this.skuArray[i] == sku) {        
+        if(this.skuArray[i] == sku) {
+            this.retailArray[i] = parseFloat(retail,10) + parseFloat(this.retailArray[i],10);       
             this.qtyArray[i] = parseInt(quantity,10) + parseInt(this.qtyArray[i],10);
             found = true;            
             }
         if(!found) {       
             this.skuArray.push(sku);
+            this.retailArray.push(retail);
             this.qtyArray.push(quantity);
             }
         this.writeCookie();         
     }
     
-    this.setQuantity = function(sku, quantity) {  
+    this.setQuantity = function(sku, retail, quantity) {  
         sku = $.trim(sku);
         var found = false;
-        if(sku == "") return;        
+        if(sku == "") return; 
+        retail = $.trim(retail);      
         quantity = $.trim(quantity);            
         this.getCookieValues();
         
@@ -107,6 +113,7 @@ function shopping_cart(owner) {
             index = i;               
         if(index != -1) {      
             this.skuArray.splice(index,1);
+            this.retailArray.splice(index,1);
             this.qtyArray.splice(index,1);
             }         
         if(this.skuArray.length == 0) {
@@ -119,9 +126,10 @@ function shopping_cart(owner) {
     this.size = function() {
         this.getCookieValues();
         var count = 0;
-        for(i=0; i < this.qtyArray.length; i++)
+                for(i=0; i < this.qtyArray.length; i++)
             count += parseInt(this.qtyArray[i],10);
         return count;
+
         }        
         
     this.getCartArray = function() {
@@ -130,9 +138,14 @@ function shopping_cart(owner) {
         for(i=0; i < this.skuArray.length; i++) {
             returnArray[i] = new Array();
             returnArray[i].push(this.skuArray[i]);
+            returnArray[i].push(this.retailArray[i]);
             returnArray[i].push(this.qtyArray[i]);
             }
         return returnArray;
-        }                    
+        }  
+
+        this.deleteCookie = function() {
+        document.cookie = this.owner + "=; expires=Mon, 01 Jan 2018 00:00:00 UTC; path=/;";
+    }                  
 }    
         
